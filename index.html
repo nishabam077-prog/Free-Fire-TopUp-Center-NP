@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10111a">
+<title>Nepal TopUp Center | Free Fire Top-Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">N</span><span>NEPAL <span class="accent">TOPUP CENTER</span><small>FREE FIRE DIAMOND STORE</small></span></a><span class="secure"><i></i> eSewa QR payment</span></header>
+<main class="wrap">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">FAST • SIMPLE • NEPAL</span><h1>Free Fire <span class="accent">Top-Up</span></h1><p>Player UID राख्नुहोस्, आफ्नो package छान्नुहोस् र eSewa QR बाट payment गर्नुहोस्।</p><div class="hero-tags"><span>✓ UID only</span><span>✓ NPR pricing</span><span>✓ Mobile friendly</span></div></div><div class="hero-art" aria-hidden="true"><div class="orb">FF</div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="hero-label">DIAMONDS<br><b>TOP-UP</b></div></div></section>
+<div class="steps"><span class="step active"><b>1</b> Player UID</span><span class="step active"><b>2</b> Package</span><span class="step active"><b>3</b> Payment</span></div>
+<section class="panel"><div class="section-head"><div><span class="num">01</span><h2>Player details</h2></div><p>तपाईंको Free Fire Player UID मात्र चाहिन्छ।</p></div><label for="playerUid">Player UID</label><input id="playerUid" type="text" inputmode="numeric" maxlength="24" placeholder="Enter your Player UID" autocomplete="off"><p class="hint">Password, OTP वा social account login कहिल्यै नदिनुहोस्।</p></section>
+<section class="panel"><div class="section-head"><div><span class="num">02</span><h2>Choose package</h2></div><p>आफूलाई चाहिएको package छान्नुहोस्।</p></div><div class="packages">
+<button class="package" data-name="25 Diamonds" data-price="49"><span class="diamond">◆</span><b>25 Diamonds</b><small>Starter pack</small><strong>Rs. 49</strong></button>
+<button class="package selected" data-name="50 Diamonds" data-price="98"><span class="diamond">◆</span><b>50 Diamonds</b><small>Popular choice</small><strong>Rs. 98</strong></button>
+<button class="package" data-name="115 Diamonds" data-price="149"><span class="diamond">◆</span><b>115 Diamonds</b><small>Value pack</small><strong>Rs. 149</strong></button>
+<button class="package" data-name="240 Diamonds" data-price="299"><span class="diamond">◆</span><b>240 Diamonds</b><small>Value pack</small><strong>Rs. 299</strong></button>
+<button class="package" data-name="610 Diamonds" data-price="739"><span class="diamond">◆</span><b>610 Diamonds</b><small>Big pack</small><strong>Rs. 739</strong></button>
+<button class="package" data-name="1240 Diamonds" data-price="1499"><span class="diamond">◆</span><b>1240 Diamonds</b><small>Mega pack</small><strong>Rs. 1,499</strong></button>
+</div><p class="hint">यी नमुना price हुन्। प्रकाशित गर्नुअघि आफ्नो सही मूल्य र उपलब्ध package राख्नुहोस्।</p></section>
+<section class="checkout"><div><span class="summary-label">YOUR ORDER</span><h3 id="summaryName">50 Diamonds</h3><p>Player UID: <b id="summaryUid">Not entered</b></p></div><div class="total"><small>Total</small><strong id="summaryPrice">Rs. 98</strong></div><button class="primary" id="payBtn">Continue to eSewa payment <span>→</span></button><p class="tiny">QR देखिनु payment confirmation होइन। Order manual verification पछि मात्र पूरा हुन्छ।</p></section>
+<section class="notice"><b>Independent top-up store</b><p>यो template Garena/Free Fire को official website होइन। ग्राहकको password, OTP वा payment PIN कहिल्यै नलिनुहोस्।</p></section>
+<footer>© <span id="year"></span> Nepal TopUp Center · Independent storefront</footer>
+</main>
+<div class="modal-backdrop" id="paymentModal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="closeModal" aria-label="Close">×</button><span class="eyebrow">ESEWA PAYMENT</span><h2 id="modalTitle">Scan to pay with eSewa</h2><p class="modal-intro">eSewa app खोल्नुहोस् र आफ्नो QR scan गर्नुहोस्। Payee name र amount जाँच गर्नुहोस्।</p>
+<div class="qr-frame"><img id="paymentQr" src="assets/your-esewa-qr.png" alt="Nepal TopUp Center eSewa QR" onerror="this.style.display='none';document.getElementById('qrPlaceholder').style.display='grid'"><div id="qrPlaceholder" class="qr-placeholder"><span>QR</span><b>तपाईंको eSewa QR थप्नुहोस्</b><small>assets/your-esewa-qr.png</small></div></div>
+<div class="pay-summary"><span id="modalPackage">50 Diamonds</span><strong id="modalPrice">Rs. 98</strong></div><p class="hint">QR मा रकम prefilled नभए सही रकम भर्नुहोस्। पैसा पठाउनुअघि प्राप्तकर्ता जाँच गर्नुहोस्।</p>
+<button class="primary" id="paidBtn">I have paid — submit for review</button><p class="tiny">यो demo हो; यसले eSewa payment verify गर्दैन वा order server मा पठाउँदैन।</p><div id="pendingMessage" class="pending" hidden></div></section></div>
+<script src="script.js"></script>
+</body></html>
